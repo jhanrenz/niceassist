@@ -1,21 +1,36 @@
-import { Button } from "@/components/ui/button"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export function App() {
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { Navbar } from "./components/navbar";
+import { Services } from "./pages/Services";
+import { Blog } from "./pages/Blog";
+import { Contact } from "./pages/Contact";
+import { Footer } from "./components/sections/Footer";
+
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+
+export default function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
-}
+    <BrowserRouter>
+      {/* scroll resets on route change */}
+      <ScrollToTop />
 
-export default App
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+
+      {/* floating arrow button */}
+      <ScrollToTopButton />
+    </BrowserRouter>
+  );
+}
