@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <footer className="w-full mt-20 border-t bg-background">
@@ -18,21 +20,36 @@ export const Footer = () => {
           {/* SERVICES */}
           <div className="flex flex-col gap-3">
             <p className="font-medium">Services</p>
+
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li className="hover:text-foreground cursor-pointer transition">
-                Customer Service
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Customer Service
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Technical Support
+
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Technical Support
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Sales & Leads
+
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Sales & Leads
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Virtual Office
+
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Virtual Office
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Web Development
+
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Web Development
+                </Link>
               </li>
             </ul>
           </div>
@@ -40,18 +57,30 @@ export const Footer = () => {
           {/* COMPANY */}
           <div className="flex flex-col gap-3">
             <p className="font-medium">Company</p>
+
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li className="hover:text-foreground cursor-pointer transition">
-                About Us
+              <li>
+                <Link to="/about" className="hover:text-foreground transition">
+                  About Us
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Services
+
+              <li>
+                <Link to="/services" className="hover:text-foreground transition">
+                  Services
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Blog
+
+              <li>
+                <Link to="/blog" className="hover:text-foreground transition">
+                  Blog
+                </Link>
               </li>
-              <li className="hover:text-foreground cursor-pointer transition">
-                Contact
+
+              <li>
+                <Link to="/contact" className="hover:text-foreground transition">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -101,5 +130,5 @@ export const Footer = () => {
 
       </div>
     </footer>
-  )
-}
+  );
+};
