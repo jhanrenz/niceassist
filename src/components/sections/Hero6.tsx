@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { PhoneCall } from "lucide-react"
-
+import { Link } from "react-router-dom";
 export const Hero6 = () => {
   return (
     <section className="w-full py-12 md:py-16 lg:py-20">
@@ -30,10 +30,12 @@ export const Hero6 = () => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 mt-2">
-            <Button size="lg" className="gap-2 hover:scale-105 transition">
-              Contact Us <PhoneCall className="w-4 h-4" />
-            </Button>
-          </div>
+  <Button asChild size="lg" className="gap-2 hover:scale-105 transition">
+    <Link to="/contact">
+      Contact Us <PhoneCall className="w-4 h-4" />
+    </Link>
+  </Button>
+</div>
 
         </div>
 
