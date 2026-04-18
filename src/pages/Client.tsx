@@ -1,12 +1,18 @@
 "use client"
 
+import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 import img1 from "@/assets/cl1.png"
 import { Separator } from "@/components/ui/separator"
 import { Client2 } from "@/components/sections/Client2"
+import { Client3 } from "@/components/sections/Client3"
+import { Client4 } from "@/components/sections/Client4"
+import { Testimonials1 } from "@/components/sections/Testimonilas1"
 
 export const Client = () => {
+  const [showMore, setShowMore] = useState(false)
+
   return (
     <section className="w-full min-h-screen flex items-center">
       <div className="container mx-auto px-4">
@@ -30,7 +36,7 @@ export const Client = () => {
               Powering Growth for Nextgen Vending USA
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
               We’re proud to partner with Nextgen Vending USA, a fast-growing company
               revolutionizing the vending industry with innovative popcorn vending machines.
               As their trusted support and sales partner, we play a key role in delivering
@@ -41,36 +47,64 @@ export const Client = () => {
             <div className="flex flex-col gap-4 text-sm md:text-base text-muted-foreground">
 
               <div>
-                <p className="font-medium text-foreground">Customer Support That Builds Loyalty</p>
-                <p>
+                <p className="font-medium text-foreground">
+                  Customer Support That Builds Loyalty
+                </p>
+                <p className="text-justify">
                   Our team handles all customer interactions—from inquiries to issue resolution—
                   ensuring fast, professional, and consistent support that strengthens brand trust.
                 </p>
               </div>
 
-              <div>
-                <p className="font-medium text-foreground">Sales That Drive Results</p>
-                <p>
-                  We engage leads, nurture prospects, and guide customers through the purchasing
-                  process, turning interest into confirmed sales with clarity and professionalism.
-                </p>
-              </div>
+              {/* HIDDEN CONTENT */}
+              {showMore && (
+                <>
+                  <div>
+                    <p className="font-medium text-foreground">
+                      Sales That Drive Results
+                    </p>
+                    <p className="text-justify">
+                      We engage leads, nurture prospects, and guide customers through the purchasing
+                      process, turning interest into confirmed sales with clarity and professionalism.
+                    </p>
+                  </div>
 
-              <div>
-                <p className="font-medium text-foreground">End-to-End Communication Management</p>
-                <p>
-                  From first contact to post-sale support, we manage the full customer journey
-                  with attention to detail, ensuring smooth communication and no missed opportunities.
-                </p>
-              </div>
+                  <div>
+                    <p className="font-medium text-foreground">
+                      End-to-End Communication Management
+                    </p>
+                    <p className="text-justify">
+                      From first contact to post-sale support, we manage the full customer journey
+                      with attention to detail, ensuring smooth communication and no missed opportunities.
+                    </p>
+                  </div>
 
-              <div>
-                <p className="font-medium text-foreground">Website Development & Management</p>
-                <p>
-                  We handle the complete website development and management for Nextgen Vending USA,
-                  keeping it optimized, responsive, and built to support scalable growth.
-                </p>
-              </div>
+                  <div>
+                    <p className="font-medium text-foreground">
+                      Website Development & Management
+                    </p>
+                    <p className="text-justify">
+                      We handle the complete website development and management for Nextgen Vending USA,
+                      keeping it optimized, responsive, and built to support scalable growth.
+                    </p>
+                  </div>
+                </>
+              )}
+
+              {/* SEE MORE / SEE LESS BUTTON */}
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="group flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full
+                bg-muted/40 hover:bg-muted/70 transition border border-transparent hover:border-muted-foreground/20 w-fit"
+              >
+                <span className="text-primary">
+                  {showMore ? "See less" : "See more"}
+                </span>
+
+                <span className="text-xs transition-transform duration-300 group-hover:translate-x-0.5">
+                  {showMore ? "▲" : "▼"}
+                </span>
+              </button>
 
             </div>
 
@@ -94,12 +128,29 @@ export const Client = () => {
           </motion.div>
 
         </div>
-        
+
         <Separator className="opacity-30" />
 
         <div className="py-10 md:py-14">
           <Client2 />
         </div>
+                <Separator className="opacity-30" />
+
+        <div className="py-10 md:py-14">
+          <Client3 />
+        </div>
+                <Separator className="opacity-30" />
+
+        <div className="py-10 md:py-14">
+          <Client4 />
+        </div>
+
+        
+                <Separator className="opacity-30" />
+        
+                <div className="py-10 md:py-14">
+                  <Testimonials1 />
+                </div>
 
       </div>
     </section>

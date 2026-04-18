@@ -46,7 +46,7 @@ export const Client2 = () => {
               Smart vending solutions built for modern business
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
               Ready-to-deploy vending machines for popcorn, pizza, hemp oil, and specialty products.
               Designed for 24/7 operation with simple maintenance and intuitive controls.
               Built for real environments with durable hardware, clean design, and cashless-ready systems.
@@ -65,7 +65,7 @@ export const Client2 = () => {
             {/* Testimonial Card */}
             <div className="mt-4 p-5 rounded-xl border bg-muted/30 shadow-sm hover:shadow-md transition">
 
-              <p className="text-sm md:text-base italic text-muted-foreground">
+              <p className="text-sm md:text-base italic text-muted-foreground text-justify">
                 “Superb help with customer support and sales! Can’t ask for more!”
               </p>
 
