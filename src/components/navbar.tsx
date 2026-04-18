@@ -2,13 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -53,7 +47,7 @@ export function Navbar() {
               {item.name}
 
               {isActive(item.path) && (
-                <span className="absolute left-0 -bottom-2 h-0.5 w-full bg-black dark:bg-white rounded-full" />
+                <span className="absolute left-0 -bottom-2 h-0.5 w-full bg-foreground rounded-full" />
               )}
             </Link>
           ))}
@@ -62,26 +56,32 @@ export function Navbar() {
         {/* Right Side */}
         <div className="flex items-center gap-3">
 
-          {/* Theme toggle */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="rounded-full flex items-center gap-2 px-3">
-                {theme === "dark" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-                <span className="text-xs text-muted-foreground hidden sm:inline">
-                  {theme === "dark" ? "Dark" : "Light"}
-                </span>
-              </Button>
-            </DropdownMenuTrigger>
+          {/* Minimal Theme Toggle */}
+          <div className="flex items-center rounded-full border bg-muted/40 p-1">
+            <button
+              onClick={() => setTheme("light")}
+              aria-label="Light mode"
+              className={`p-2 rounded-full transition-all ${
+                theme === "light"
+                  ? "bg-white text-black shadow-sm scale-105"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Sun className="h-4 w-4" />
+            </button>
 
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
-                <Sun className="mr-2 h-4 w-4" /> Light mode
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
-                <Moon className="mr-2 h-4 w-4" /> Dark mode
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+            <button
+              onClick={() => setTheme("dark")}
+              aria-label="Dark mode"
+              className={`p-2 rounded-full transition-all ${
+                theme === "dark"
+                  ? "bg-black text-white shadow-sm scale-105"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Moon className="h-4 w-4" />
+            </button>
+          </div>
 
           {/* CTA (desktop only) */}
           <Link to="/contact">
@@ -123,6 +123,31 @@ export function Navbar() {
               Get Started
             </Button>
           </Link>
+
+          {/* Mobile Theme Toggle */}
+          <div className="flex items-center justify-center rounded-full border bg-muted/40 p-1 mt-2">
+            <button
+              onClick={() => setTheme("light")}
+              className={`p-2 rounded-full transition ${
+                theme === "light"
+                  ? "bg-white text-black shadow-sm"
+                  : "text-muted-foreground"
+              }`}
+            >
+              <Sun className="h-4 w-4" />
+            </button>
+
+            <button
+              onClick={() => setTheme("dark")}
+              className={`p-2 rounded-full transition ${
+                theme === "dark"
+                  ? "bg-black text-white shadow-sm"
+                  : "text-muted-foreground"
+              }`}
+            >
+              <Moon className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       )}
     </header>
