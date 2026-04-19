@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import img1 from "@/assets/cl1.png"
+import img1 from "@/assets/cl1.jpg"
 import { Separator } from "@/components/ui/separator"
 import { Client2 } from "@/components/sections/Client2"
 import { Client3 } from "@/components/sections/Client3"
@@ -25,73 +25,69 @@ export const Client = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col gap-5 text-center lg:text-left"
+            className="flex flex-col gap-4 text-center lg:text-left max-w-xl"
           >
 
-            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs">
-              Our Client
+            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs uppercase tracking-wide">
+              E-commerce Case Study
             </Badge>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight">
-              Powering Growth for Nextgen Vending USA
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight">
+              Web Development & Growth for a Modern E-commerce Brand
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
-              We’re proud to partner with Nextgen Vending USA, a fast-growing company
-              revolutionizing the vending industry with innovative popcorn vending machines.
-              As their trusted support and sales partner, we play a key role in delivering
-              seamless customer experiences and driving revenue growth.
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-left">
+              We design, develop, and manage high-performing e-commerce platforms that support
+              innovative products and scalable businesses. Our focus is on creating seamless digital
+              experiences that convert visitors into customers and drive long-term growth.
             </p>
 
-            {/* Sub sections */}
             <div className="flex flex-col gap-4 text-sm md:text-base text-muted-foreground">
 
               <div>
                 <p className="font-medium text-foreground">
-                  Customer Support That Builds Loyalty
+                  Customer Support & Experience
                 </p>
-                <p className="text-justify">
-                  Our team handles all customer interactions—from inquiries to issue resolution—
-                  ensuring fast, professional, and consistent support that strengthens brand trust.
+                <p className="text-left">
+                  We handle customer interactions—from inquiries to issue resolution—ensuring fast,
+                  professional, and consistent support that builds trust and improves retention.
                 </p>
               </div>
 
-              {/* HIDDEN CONTENT */}
               {showMore && (
                 <>
                   <div>
                     <p className="font-medium text-foreground">
-                      Sales That Drive Results
+                      Sales Optimization & Conversion
                     </p>
-                    <p className="text-justify">
-                      We engage leads, nurture prospects, and guide customers through the purchasing
-                      process, turning interest into confirmed sales with clarity and professionalism.
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="font-medium text-foreground">
-                      End-to-End Communication Management
-                    </p>
-                    <p className="text-justify">
-                      From first contact to post-sale support, we manage the full customer journey
-                      with attention to detail, ensuring smooth communication and no missed opportunities.
+                    <p className="text-left">
+                      We engage leads, nurture prospects, and guide users through the buying journey,
+                      turning interest into confirmed sales with clarity and efficiency.
                     </p>
                   </div>
 
                   <div>
                     <p className="font-medium text-foreground">
-                      Website Development & Management
+                      End-to-End Customer Journey
                     </p>
-                    <p className="text-justify">
-                      We handle the complete website development and management for Nextgen Vending USA,
-                      keeping it optimized, responsive, and built to support scalable growth.
+                    <p className="text-left">
+                      From first interaction to post-sale support, we manage the full customer lifecycle,
+                      ensuring smooth communication and no missed opportunities.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-foreground">
+                      E-commerce Website Development
+                    </p>
+                    <p className="text-left">
+                      We build and maintain responsive, optimized websites designed for performance,
+                      usability, and scalable growth.
                     </p>
                   </div>
                 </>
               )}
 
-              {/* SEE MORE / SEE LESS BUTTON */}
               <button
                 onClick={() => setShowMore(!showMore)}
                 className="group flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full
@@ -116,13 +112,13 @@ export const Client = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="flex justify-center lg:justify-end h-full"
+            className="flex justify-center lg:justify-end"
           >
-            <div className="w-full max-w-md lg:h-[75vh] rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
+            <div className="w-full max-w-md rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
               <img
                 src={img1}
-                alt="Nextgen Vending USA"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
+                alt="E-commerce Project"
+                className="w-full h-auto object-cover hover:scale-[1.03] transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -134,23 +130,24 @@ export const Client = () => {
         <div className="py-10 md:py-14">
           <Client2 />
         </div>
-                <Separator className="opacity-30" />
+
+        <Separator className="opacity-30" />
 
         <div className="py-10 md:py-14">
           <Client3 />
         </div>
-                <Separator className="opacity-30" />
+
+        <Separator className="opacity-30" />
 
         <div className="py-10 md:py-14">
           <Client4 />
         </div>
 
-        
-                <Separator className="opacity-30" />
-        
-                <div className="py-10 md:py-14">
-                  <Testimonials1 />
-                </div>
+        <Separator className="opacity-30" />
+
+        <div className="py-10 md:py-14">
+          <Testimonials1 />
+        </div>
 
       </div>
     </section>

@@ -29,7 +29,7 @@ export function Home() {
               transition={{ duration: 0.5 }}
             >
               <Button variant="secondary" size="sm" className="gap-2">
-                Assistly Me
+                Nice Assist Pre!
               </Button>
             </motion.div>
 

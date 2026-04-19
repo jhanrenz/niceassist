@@ -29,7 +29,7 @@ export function Navbar() {
           to="/"
           className="text-lg font-semibold tracking-tight hover:opacity-80 transition"
         >
-          Assistly Me
+          Nice Assist
         </Link>
 
         {/* Desktop Nav */}

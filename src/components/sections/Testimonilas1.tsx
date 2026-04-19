@@ -11,6 +11,7 @@ import {
 import { User, Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { motion } from "framer-motion"
+import { Badge } from "@/components/ui/badge"
 
 // LOCAL IMAGES
 import prf1 from "@/assets/prf1.jpg"
@@ -21,43 +22,43 @@ import prf5 from "@/assets/prf5.jpg"
 
 const testimonials = [
   {
-    name: "Angel Santos",
-    role: "Startup Founder",
+    name: "Maria Santos",
+    role: "Campus Administrator",
     avatar: prf1,
     comment:
-      "Assistly Me helped us simplify our workflow. Everything feels faster and more organized now.",
+      "The system made it easier to manage student records and announcements. Everything is now centralized and accessible.",
     rating: 5,
   },
   {
-    name: "Rhon Reyes",
-    role: "Project Manager",
+    name: "Ramon Reyes",
+    role: "Barangay Secretary",
     avatar: prf2,
     comment:
-      "We finally have clarity in our processes. It removed so much unnecessary back-and-forth.",
+      "Processing documents and tracking residents is now much faster. It improved our daily operations significantly.",
     rating: 5,
   },
   {
-    name: "David Cruz",
-    role: "Freelance Designer",
+    name: "Angela Cruz",
+    role: "Community Member",
     avatar: prf3,
     comment:
-      "I can focus more on design instead of managing chaos. Huge improvement in my daily work.",
+      "The price tracker helps me compare goods easily. It’s very useful for budgeting daily expenses.",
     rating: 4,
   },
   {
-    name: "Michale Lim",
-    role: "Business Owner",
+    name: "Michael Lim",
+    role: "Barangay Official",
     avatar: prf4,
     comment:
-      "Clean, simple, and effective. It really feels like everything just flows better now.",
+      "Blotter records and reports are now well-organized. It reduced manual work and errors.",
     rating: 5,
   },
   {
     name: "Mica Lee",
-    role: "Tech Lead",
+    role: "Student User",
     avatar: prf5,
     comment:
-      "Smooth experience and very intuitive workflow system. Highly recommended.",
+      "Accessing school updates and resources is much more convenient. The platform is simple and easy to use.",
     rating: 5,
   },
 ]
@@ -136,30 +137,35 @@ export const Testimonials1 = () => {
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 flex flex-col items-center gap-2"
+          className="text-center mb-10 flex flex-col items-center gap-3"
         >
+          <Badge variant="outline" className="text-xs uppercase tracking-wide">
+            User Feedback
+          </Badge>
+
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight max-w-2xl">
-            Trusted by people who value clarity and focus
+            Trusted by communities, institutions, and everyday users
           </h2>
 
           <p className="text-sm md:text-base text-muted-foreground max-w-xl">
-            Real feedback from users who improved their workflow with Assistly Me.
+            Feedback from users who experienced improved efficiency, better access
+            to services, and smarter daily decisions through our systems.
           </p>
 
-          <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground border px-3 py-1 rounded-full bg-muted/40">
+          <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground border px-3 py-1 rounded-full bg-muted/40">
             <User className="w-3.5 h-3.5" />
             Swipe, click arrows, or use dots
           </div>
         </motion.div>
 
-        {/* CAROUSEL WRAPPER */}
+        {/* CAROUSEL */}
         <div
           className="max-w-6xl mx-auto px-2 sm:px-4 relative"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
 
-          {/* LEFT BUTTON */}
+          {/* LEFT */}
           <button
             onClick={prev}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
@@ -168,7 +174,7 @@ export const Testimonials1 = () => {
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* RIGHT BUTTON */}
+          {/* RIGHT */}
           <button
             onClick={next}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10
@@ -178,7 +184,6 @@ export const Testimonials1 = () => {
           </button>
 
           <Carousel setApi={setApi} className="w-full">
-
             <CarouselContent className="-ml-2 md:-ml-4">
 
               {testimonials.map((t, index) => (

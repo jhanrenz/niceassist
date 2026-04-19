@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import img1 from "@/assets/cl4.png"
+import img1 from "@/assets/cl4.jpg"
 
 export const Client4 = () => {
   const [showMore, setShowMore] = useState(false)
@@ -20,22 +20,22 @@ export const Client4 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col gap-5 text-center lg:text-left"
+            className="flex flex-col gap-4 text-center lg:text-left max-w-xl"
           >
 
-            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs">
-              Branding Project
+            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs uppercase tracking-wide">
+              Community App
             </Badge>
 
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Branding for Chatoue
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+              Essentials Price Tracker for Smarter Everyday Decisions
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
-              We developed a modern and cohesive brand identity for Chatoue,
-              focusing on visual consistency, emotional appeal, and a strong digital presence.
-              The goal was to position the brand as elegant, trustworthy, and memorable
-              in a competitive market.
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-left">
+              We developed a community-driven application that helps users monitor and compare
+              the prices of essential goods in real time. Designed to promote transparency and
+              affordability, the platform empowers households to make informed purchasing decisions
+              while staying updated on local market trends.
             </p>
 
             {/* KEY POINTS */}
@@ -43,11 +43,10 @@ export const Client4 = () => {
 
               <div>
                 <p className="font-medium text-foreground">
-                  Brand Identity Design
+                  Real-Time Price Monitoring
                 </p>
-                <p className="text-justify">
-                  Created a refined visual system including logo direction, typography,
-                  and color palette to reflect Chatoue’s personality and positioning.
+                <p className="text-left">
+                  Track daily price changes of essential goods across different locations and stores.
                 </p>
               </div>
 
@@ -55,31 +54,29 @@ export const Client4 = () => {
                 <>
                   <div>
                     <p className="font-medium text-foreground">
-                      Consistent Visual Language
+                      Community-Driven Updates
                     </p>
-                    <p className="text-justify">
-                      Ensured consistency across all digital and marketing materials
-                      to strengthen recognition and brand recall.
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Digital Presence Enhancement
-                    </p>
-                    <p className="text-justify">
-                      Improved overall online presentation to create a more professional
-                      and engaging user experience across platforms.
+                    <p className="text-left">
+                      Users can contribute and share price data, helping build a more accurate and
+                      transparent pricing ecosystem.
                     </p>
                   </div>
 
                   <div>
                     <p className="font-medium text-foreground">
-                      Brand Positioning Strategy
+                      Smart Comparison Tools
                     </p>
-                    <p className="text-justify">
-                      Defined a clear brand direction to help Chatoue stand out
-                      in a competitive and saturated market.
+                    <p className="text-left">
+                      Easily compare prices to find the most affordable options and save on daily expenses.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-foreground">
+                      Local Market Insights
+                    </p>
+                    <p className="text-left">
+                      Gain insights into pricing trends and availability of goods within the community.
                     </p>
                   </div>
                 </>
@@ -115,8 +112,8 @@ export const Client4 = () => {
             <div className="w-full max-w-md rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
               <img
                 src={img1}
-                alt="Chatoue Branding"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
+                alt="Essentials Price Tracker App"
+                className="w-full h-auto object-cover hover:scale-[1.03] transition-transform duration-500"
               />
             </div>
           </motion.div>

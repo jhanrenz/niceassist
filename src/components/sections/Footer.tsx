@@ -10,7 +10,7 @@ export const Footer = () => {
 
           {/* BRAND */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xl font-semibold">Assistly Me</h3>
+            <h3 className="text-xl font-semibold">Nice Assist</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Streamlining your business operations so you can focus on growth,
               innovation, and what truly matters.
@@ -92,17 +92,17 @@ export const Footer = () => {
             <div className="text-sm text-muted-foreground space-y-2">
               <p>
                 <span className="text-foreground font-medium">Email:</span>{" "}
-                jz@assistlyme.com
+                jsecre13@gmail.com
               </p>
-
+{/* 
               <p>
-                <span className="text-foreground font-medium">USA:</span>{" "}
-                Fort Worth, TX
-              </p>
+                <span className="text-foreground font-medium">:</span>{" "}
+                Fo
+              </p> */}
 
               <p>
                 <span className="text-foreground font-medium">Philippines:</span>{" "}
-                Baguio City
+                East Blue
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
 
           <p>
-            © {new Date().getFullYear()} Assistly Me. All rights reserved.
+            © {new Date().getFullYear()} Nice Assist. All rights reserved.
           </p>
 
           <p>

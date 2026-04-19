@@ -20,34 +20,35 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col gap-8"
           >
-            <Badge className="w-fit text-base px-5 py-2 rounded-full">
-              Contact Us
+            <Badge className="w-fit text-base px-5 py-2 rounded-full uppercase tracking-wide">
+              Contact
             </Badge>
 
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
-                Let’s work together
+                Let’s build your next system
               </h2>
 
               <p className="text-muted-foreground max-w-md text-base leading-relaxed">
-                Assistlyme helps streamline operations, reduce workload, and improve efficiency —
-                so you can focus on growing your business with confidence.
+                From campus platforms to barangay systems and community apps,
+                I develop solutions that simplify processes, improve efficiency,
+                and deliver real impact for users.
               </p>
             </div>
 
             <div className="flex flex-col gap-5 mt-2">
               {[
                 {
-                  title: "Operational Efficiency",
-                  desc: "Simplifying workflows and daily processes.",
+                  title: "Custom System Development",
+                  desc: "Tailored solutions for schools, communities, and organizations.",
                 },
                 {
-                  title: "Reliable Support",
-                  desc: "Dedicated assistance for your business needs.",
+                  title: "Efficient & Scalable",
+                  desc: "Built for performance, usability, and long-term growth.",
                 },
                 {
-                  title: "Scalable Solutions",
-                  desc: "Services that grow with your business.",
+                  title: "User-Focused Design",
+                  desc: "Clean, intuitive interfaces for better user experience.",
                 },
               ].map((item, idx) => (
                 <motion.div
@@ -74,15 +75,11 @@ export const Contact = () => {
             >
               <p>
                 <span className="font-medium text-foreground">Email:</span>{" "}
-                jz@assistlyme.com
+                jsecre13@gmail.com
               </p>
               <p>
-                <span className="font-medium text-foreground">USA Office:</span>{" "}
-                1116 Jacksboro Highway, Fort Worth, TX
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Philippines:</span>{" "}
-                Baguio City
+                <span className="font-medium text-foreground">Location:</span>{" "}
+                Pangasinan, Philippines
               </p>
             </motion.div>
           </motion.div>
@@ -104,7 +101,7 @@ export const Contact = () => {
                 transition={{ duration: 0.6 }}
                 className="text-xl font-semibold"
               >
-                Book a Meeting
+                Send a Message
               </motion.h3>
 
               {[
@@ -147,6 +144,7 @@ export const Contact = () => {
               </motion.div>
             </motion.div>
           </motion.div>
+
         </div>
       </div>
     </section>

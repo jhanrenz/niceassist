@@ -20,11 +20,11 @@ export const Client2 = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex justify-center lg:justify-start"
           >
-            <div className="w-full max-w-md lg:h-[75vh] rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
+            <div className="w-full max-w-md rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
               <img
                 src={img1}
-                alt="Nextgen Vending USA"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
+                alt="Campus Website"
+                className="w-full h-auto object-cover hover:scale-[1.03] transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -35,38 +35,31 @@ export const Client2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col gap-6 text-center lg:text-left"
+            className="flex flex-col gap-5 text-center lg:text-left max-w-xl"
           >
 
-            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs">
-              About Nextgen Vending USA
+            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs uppercase tracking-wide">
+              Campus Website
             </Badge>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight">
-              Smart vending solutions built for modern business
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight">
+              A Modern Digital Platform for Campus Life
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
-              Ready-to-deploy vending machines for popcorn, pizza, hemp oil, and specialty products.
-              Designed for 24/7 operation with simple maintenance and intuitive controls.
-              Built for real environments with durable hardware, clean design, and cashless-ready systems.
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-left">
+              We design and develop campus websites that streamline communication,
+              enhance student engagement, and provide easy access to academic resources.
+              Built with usability and scalability in mind, the platform supports students,
+              faculty, and administrators in one unified digital experience.
             </p>
 
-            {/* Website Link */}
-            <a
-              href="https://nextgenvendingusa.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-foreground hover:underline w-fit mx-auto lg:mx-0"
-            >
-              Visit Website →
-            </a>
 
             {/* Testimonial Card */}
             <div className="mt-4 p-5 rounded-xl border bg-muted/30 shadow-sm hover:shadow-md transition">
 
-              <p className="text-sm md:text-base italic text-muted-foreground text-justify">
-                “Superb help with customer support and sales! Can’t ask for more!”
+              <p className="text-sm md:text-base italic text-muted-foreground text-left">
+                “The platform made it easier for students and staff to stay connected,
+                access resources, and manage daily campus activities efficiently.”
               </p>
 
               {/* Avatar + Name */}
@@ -74,16 +67,16 @@ export const Client2 = () => {
 
                 <img
                   src={img2}
-                  alt="Sabrina Moreno"
+                  alt="Campus Administrator"
                   className="w-10 h-10 rounded-full object-cover border"
                 />
 
                 <div className="text-left">
                   <p className="text-sm font-medium text-foreground">
-                    Sabrina Moreno
+                    Campus Administrator
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    NEXTGEN VENDING USA
+                    University Management
                   </p>
                 </div>
 

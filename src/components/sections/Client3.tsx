@@ -25,8 +25,8 @@ export const Client3 = () => {
             <div className="w-full max-w-md rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition">
               <img
                 src={img1}
-                alt="Client Project"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
+                alt="Barangay Management System"
+                className="w-full h-auto object-cover hover:scale-[1.03] transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -37,21 +37,22 @@ export const Client3 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col gap-5 text-center lg:text-left"
+            className="flex flex-col gap-4 text-center lg:text-left max-w-xl"
           >
 
-            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs">
-              Client Success Story
+            <Badge variant="outline" className="w-fit mx-auto lg:mx-0 text-xs uppercase tracking-wide">
+              Barangay Management System
             </Badge>
 
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Driving operational efficiency through smart digital support
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+              Streamlining Community Services Through Digital Solutions
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
-              We partnered with this client to streamline customer operations,
-              improve response handling, and enhance their digital workflows through
-              structured support systems and optimized communication processes.
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-left">
+              We developed a centralized barangay management system designed to simplify
+              administrative tasks, improve record keeping, and enhance service delivery.
+              The platform enables faster transactions, organized resident data, and
+              efficient communication between officials and the community.
             </p>
 
             {/* Key points */}
@@ -59,10 +60,10 @@ export const Client3 = () => {
 
               <div>
                 <p className="font-medium text-foreground">
-                  Improved Customer Experience
+                  Resident Information Management
                 </p>
-                <p className="text-justify">
-                  Faster responses and structured support improved satisfaction and reliability.
+                <p className="text-left">
+                  Maintain organized and searchable records of residents, households, and profiles.
                 </p>
               </div>
 
@@ -70,34 +71,34 @@ export const Client3 = () => {
                 <>
                   <div>
                     <p className="font-medium text-foreground">
-                      Optimized Sales Process
+                      Document & Certificate Processing
                     </p>
-                    <p className="text-justify">
-                      Better lead handling and follow-ups increased conversion efficiency.
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Streamlined Operations
-                    </p>
-                    <p className="text-justify">
-                      Simplified communication systems reduced internal workflow friction.
+                    <p className="text-left">
+                      Generate barangay clearances, permits, and certificates quickly and accurately.
                     </p>
                   </div>
 
                   <div>
                     <p className="font-medium text-foreground">
-                      Digital Support Enhancement
+                      Blotter & Incident Tracking
                     </p>
-                    <p className="text-justify">
-                      Strengthened online systems improved overall business scalability.
+                    <p className="text-left">
+                      Record and monitor incidents with structured reporting and easy retrieval.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-foreground">
+                      Announcements & Community Updates
+                    </p>
+                    <p className="text-left">
+                      Share important notices and updates to keep residents informed in real time.
                     </p>
                   </div>
                 </>
               )}
 
-              {/* PREMIUM TOGGLE BUTTON */}
+              {/* TOGGLE BUTTON */}
               <button
                 onClick={() => setShowMore(!showMore)}
                 className="group flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full
