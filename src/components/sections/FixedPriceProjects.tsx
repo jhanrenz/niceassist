@@ -16,11 +16,11 @@ export const FixedPriceProjects = () => {
           className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-            Fixed Price Projects
+            Fixed Price Web Development Projects
           </h2>
 
           <p className="text-muted-foreground mt-3 text-sm md:text-base max-w-xl mx-auto">
-            Simplifying work, amplifying results through clear structure and predictable delivery.
+            Transparent scope, predictable timeline, and quality-driven delivery for your systems.
           </p>
         </motion.div>
 
@@ -37,12 +37,12 @@ export const FixedPriceProjects = () => {
             className="p-8 rounded-2xl border bg-background shadow-sm hover:shadow-md transition"
           >
             <h3 className="text-xl md:text-2xl font-semibold mb-3">
-              Receive on time
+              On-time Delivery
             </h3>
 
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-              Let us manage the details, you lead the vision. We ensure every task
-              is delivered on schedule so your workflow stays consistent and stress-free.
+              Whether it’s a campus management system, barangay platform, or e-commerce site,
+              we ensure every feature is delivered on schedule so your project launches smoothly.
             </p>
           </motion.div>
 
@@ -56,12 +56,12 @@ export const FixedPriceProjects = () => {
             className="p-8 rounded-2xl border bg-background shadow-sm hover:shadow-md transition"
           >
             <h3 className="text-xl md:text-2xl font-semibold mb-3">
-              Fast work turnaround
+              Rapid Development
             </h3>
 
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-              We take care of tasks, you take care of growth. Our system is built
-              for speed without sacrificing quality or precision.
+              Our web development pipeline is optimized for fast iterations without sacrificing code quality.
+              Features go from planning to production quickly, helping you scale your system efficiently.
             </p>
           </motion.div>
 
@@ -75,12 +75,12 @@ export const FixedPriceProjects = () => {
             className="p-8 rounded-2xl border bg-muted/20 shadow-sm hover:shadow-md transition"
           >
             <h3 className="text-xl md:text-2xl font-semibold mb-3">
-              Simplified process
+              Streamlined Process
             </h3>
 
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-              Clear steps, predictable delivery, no confusion. We remove unnecessary
-              complexity so you can focus on execution and growth instead of operations.
+              From requirement gathering to deployment, every step is clear and structured. 
+              You focus on your vision; we focus on building stable, maintainable systems that scale.
             </p>
           </motion.div>
 

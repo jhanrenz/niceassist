@@ -11,7 +11,6 @@ export const Hero7 = () => {
   return (
     <section className="w-full py-16 md:py-24 lg:py-32">
 
-      {/* SAFE CONTAINER */}
       <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -26,17 +25,18 @@ export const Hero7 = () => {
           >
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              We are driven by values
+              We build systems that solve real problems
             </h2>
 
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
-              With Assistly Me, you gain a trusted partner committed to simplifying complexity,
-              boosting productivity, and giving you the freedom to lead your business with confidence.
+              From campus management systems to barangay platforms and e-commerce solutions,
+              we develop scalable and efficient web applications designed to improve workflows,
+              enhance communication, and support digital transformation.
             </p>
 
             <Link to="/contact">
               <Button className="w-fit gap-2 hover:scale-105 transition">
-                Let’s talk <MoveRight className="w-4 h-4" />
+                Start a Project <MoveRight className="w-4 h-4" />
               </Button>
             </Link>
 
@@ -52,7 +52,7 @@ export const Hero7 = () => {
           >
             <img
               src={abt4}
-              alt="Hero 7"
+              alt="Web Development Systems"
               className="w-full h-full object-cover aspect-4/3 hover:scale-[1.03] transition-transform duration-500"
             />
           </motion.div>

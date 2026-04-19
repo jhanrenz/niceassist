@@ -6,26 +6,68 @@ import { Card } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Users } from "lucide-react"
 
-// images
-import founder1 from "@/assets/founder1.png"
-import founder2 from "@/assets/founder2.png"
-import founder3 from "@/assets/founder3.png"
+// images (fn1 to fn10)
+import fn1 from "@/assets/fn1.png"
+import fn2 from "@/assets/fn2.png"
+import fn3 from "@/assets/fn3.png"
+import fn4 from "@/assets/fn4.png"
+import fn5 from "@/assets/fn5.png"
+import fn6 from "@/assets/fn6.png"
+import fn7 from "@/assets/fn7.png"
+import fn8 from "@/assets/fn8.png"
+import fn9 from "@/assets/fn9.png"
+import fn10 from "@/assets/fn10.png"
 
-const founders = [
+const team = [
   {
-    name: "Joseph “AJ” Velador",
-    role: "Founder / CEO",
-    image: founder1,
+    name: "Monkey D. Luffy",
+    role: "Chief Executive Officer (CEO)",
+    image: fn1,
   },
   {
-    name: "Luis Ceron",
-    role: "Founder / CFO",
-    image: founder2,
+    name: "Naruto Uzumaki",
+    role: "Chief Technology Officer (CTO)",
+    image: fn2,
   },
   {
-    name: "Jezver “JZ” Alejandro",
-    role: "Founder / Director of Operations",
-    image: founder3,
+    name: "Asta",
+    role: "System Lead",
+    image: fn3,
+  },
+  {
+    name: "Roronoa Zoro",
+    role: "System Lead",
+    image: fn4,
+  },
+  {
+    name: "Shikamaru Nara",
+    role: "Frontend Developer",
+    image: fn5,
+  },
+  {
+    name: "Sanji Vinsmoke",
+    role: "Backend Developer",
+    image: fn6,
+  },
+  {
+    name: "Itachi Uchiha",
+    role: "Full Stack Developer",
+    image: fn7,
+  },
+  {
+    name: "Kakashi Hatake",
+    role: "DevOps Engineer",
+    image: fn8,
+  },
+  {
+    name: "Sasuke Uchiha",
+    role: "System Architect",
+    image: fn9,
+  },
+  {
+    name: "Yami Sukehiro",
+    role: "Technical Lead (Marketing Systems)",
+    image: fn10,
   },
 ]
 
@@ -41,44 +83,39 @@ export const Founder = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center text-center gap-4"
         >
-          <Badge variant="outline" className="gap-2">
+          <Badge variant="outline" className="gap-2 uppercase tracking-wide">
             <Users className="w-3.5 h-3.5" />
-            Leadership
+            Development Team
           </Badge>
 
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-            Meet Our Founders
+            Meet Our Developers
           </h2>
 
-          <p className="text-muted-foreground max-w-6xl leading-relaxed text-sm md:text-base text-justify">
-            Our founder possesses extensive expertise in business operations,
-            customer experience, and technology-driven solutions. Driven by a
-            passion for building efficient systems and scalable businesses, he
-            established Assistlyme to help organizations streamline customer
-            support, enhance sales performance, and optimize operations.
-            He delivers measurable results through hands-on management and
-            strategic insight, empowering partners to accelerate growth and
-            achieve operational excellence.
+          <p className="text-muted-foreground max-w-3xl leading-relaxed text-sm md:text-base">
+            A high-performance development team inspired by legendary warriors,
+            focused on building scalable systems, modern web applications, and
+            digital platforms for real-world impact.
           </p>
         </motion.div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {founders.map((f, index) => (
+          {team.map((f, index) => (
             <motion.div
               key={f.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ delay: index * 0.05 }}
               whileHover={{ y: -6 }}
               className="w-full"
             >
               <Card className="w-full h-full p-6 flex flex-col items-center text-center border bg-background/60 backdrop-blur-md shadow-sm hover:shadow-lg transition-all duration-300">
 
-                {/* IMAGE (ONLY CHANGE: BIGGER SIZE) */}
-                <div className="w-44 h-44 mb-5">
+                {/* IMAGE */}
+                <div className="w-40 h-40 mb-5">
                   <img
                     src={f.image}
                     alt={f.name}
